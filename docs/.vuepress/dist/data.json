@@ -1,0 +1,17 @@
+{
+  "stats": {
+    "articles": 1,
+    "notes": 3,
+    "projects": 1
+  },
+  "notesList": [
+    {
+      "name": "01计算机网络",
+      "path": "/notes/01计算机网络/"
+    },
+    {
+      "name": "搭建vuepress",
+      "path": "/notes/搭建vuepress/"
+    }
+  ]
+}

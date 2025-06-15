@@ -1,0 +1,21 @@
+{
+  "stats": {
+    "articles": 2,
+    "notes": 4,
+    "projects": 1
+  },
+  "notesList": [
+    {
+      "name": "01计算机网络",
+      "path": "/notes/01计算机网络/"
+    },
+    {
+      "name": "02计算机组成原理",
+      "path": "/notes/02计算机组成原理/"
+    },
+    {
+      "name": "搭建vuepress",
+      "path": "/notes/搭建vuepress/"
+    }
+  ]
+}

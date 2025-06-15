@@ -1,0 +1,20 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate:data": "node scripts/generateData.js",
+    "docs:dev": "npm run generate:data && vuepress dev docs",
+    "docs:build": "npm run generate:data && vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lighthouse": "^12.6.1",
+    "vuepress": "^1.9.10"
+  },
+  "dependencies": {
+  }
+}
