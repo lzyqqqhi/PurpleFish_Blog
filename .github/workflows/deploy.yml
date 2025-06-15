@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 当推送代码到 main 分支时触发
+      - main
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # 根据你的项目需求设置合适的 Node.js 版本
+        node-version: '18'
 
     - name: Install dependencies
       run: npm install
@@ -27,7 +27,8 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: docs/.vuepress/dist  # 假设静态文件生成在 docs/.vuepress/dist 目录
-        target_branch: gh-pages  # 部署到 gh-pages 分支
-        repo_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的令牌
-        commit_message: 'Automated deployment to GitHub Pages'
+        folder: docs/.vuepress/dist
+        target-folder: docs/.vuepress/dist
+        target-branch: gh-pages
+        commit-message: 'Automated deployment to GitHub Pages'
+        token: ${{ secrets.GITHUB_TOKEN }}
