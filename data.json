@@ -1,0 +1,65 @@
+{
+  "stats": {
+    "articles": 3,
+    "notes": 11,
+    "projects": 2
+  },
+  "notesList": [
+    {
+      "name": "01计算机网络",
+      "path": "/notes/01计算机网络"
+    },
+    {
+      "name": "02计算机组成原理",
+      "path": "/notes/02计算机组成原理"
+    },
+    {
+      "name": "03.0html复习",
+      "path": "/notes/03.0html复习"
+    },
+    {
+      "name": "03.1HTML5新API",
+      "path": "/notes/03.1HTML5新API"
+    },
+    {
+      "name": "03.2HTML本地存储与cookie",
+      "path": "/notes/03.2HTML本地存储与cookie"
+    },
+    {
+      "name": "03.3嵌入音频视频",
+      "path": "/notes/03.3嵌入音频视频"
+    },
+    {
+      "name": "03.4html元素专题",
+      "path": "/notes/03.4html元素专题"
+    },
+    {
+      "name": "04.0前端浏览器",
+      "path": "/notes/04.0前端浏览器"
+    },
+    {
+      "name": "04.1跨域",
+      "path": "/notes/04.1跨域"
+    },
+    {
+      "name": "04.2浏览器请求DNS",
+      "path": "/notes/04.2浏览器请求DNS"
+    }
+  ],
+  "articlesList": [
+    {
+      "name": "01Apply和Bind和Call",
+      "path": "/articles/01Apply和Bind和Call"
+    },
+    {
+      "name": "图片类型",
+      "path": "/articles/图片类型"
+    }
+  ],
+  "projectsList": [
+    {
+      "name": "Tab样式",
+      "path": "/projects/Tab样式"
+    }
+  ]
+}
