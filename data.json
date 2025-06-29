@@ -1,0 +1,97 @@
+{
+  "stats": {
+    "articles": 5,
+    "notes": 17,
+    "projects": 2
+  },
+  "notesList": [
+    {
+      "name": "01计算机网络",
+      "path": "/notes/01计算机网络"
+    },
+    {
+      "name": "02计算机组成原理",
+      "path": "/notes/02计算机组成原理"
+    },
+    {
+      "name": "03.0html复习",
+      "path": "/notes/03.0html复习"
+    },
+    {
+      "name": "03.1HTML5新API",
+      "path": "/notes/03.1HTML5新API"
+    },
+    {
+      "name": "03.2HTML本地存储与cookie",
+      "path": "/notes/03.2HTML本地存储与cookie"
+    },
+    {
+      "name": "03.3嵌入音频视频",
+      "path": "/notes/03.3嵌入音频视频"
+    },
+    {
+      "name": "03.4html元素专题",
+      "path": "/notes/03.4html元素专题"
+    },
+    {
+      "name": "04.0前端浏览器",
+      "path": "/notes/04.0前端浏览器"
+    },
+    {
+      "name": "04.1跨域",
+      "path": "/notes/04.1跨域"
+    },
+    {
+      "name": "04.2浏览器请求DNS",
+      "path": "/notes/04.2浏览器请求DNS"
+    },
+    {
+      "name": "05.0CSS复习",
+      "path": "/notes/05.0CSS复习"
+    },
+    {
+      "name": "05.1CSS动画",
+      "path": "/notes/05.1CSS动画"
+    },
+    {
+      "name": "05.2CSS工程化",
+      "path": "/notes/05.2CSS工程化"
+    },
+    {
+      "name": "05.3CSS预处理器",
+      "path": "/notes/05.3CSS预处理器"
+    },
+    {
+      "name": "05.4CSS渲染原理与CPU加速",
+      "path": "/notes/05.4CSS渲染原理与CPU加速"
+    },
+    {
+      "name": "05.5DOMCSS重排重绘",
+      "path": "/notes/05.5DOMCSS重排重绘"
+    }
+  ],
+  "articlesList": [
+    {
+      "name": "01Apply和Bind和Call",
+      "path": "/articles/01Apply和Bind和Call"
+    },
+    {
+      "name": "02图片类型",
+      "path": "/articles/02图片类型"
+    },
+    {
+      "name": "03前端面试总结",
+      "path": "/articles/03前端面试总结"
+    },
+    {
+      "name": "04DPR与REM移动端适配",
+      "path": "/articles/04DPR与REM移动端适配"
+    }
+  ],
+  "projectsList": [
+    {
+      "name": "Tab样式",
+      "path": "/projects/Tab样式"
+    }
+  ]
+}
