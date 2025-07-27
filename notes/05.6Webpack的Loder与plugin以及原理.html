@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Webpack的loader与plugin以及原理 | PurpleFish’s Blog</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="这是一个基于 VuePress 的博客">
+    
+    <link rel="preload" href="/PurpleFish_Blog/assets/css/0.styles.2b0a0130.css" as="style"><link rel="preload" href="/PurpleFish_Blog/assets/js/app.ff8256e3.js" as="script"><link rel="preload" href="/PurpleFish_Blog/assets/js/2.43a24c62.js" as="script"><link rel="preload" href="/PurpleFish_Blog/assets/js/1.6ee28ae7.js" as="script"><link rel="preload" href="/PurpleFish_Blog/assets/js/49.04a56087.js" as="script"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/10.b04fc0d4.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/11.5a32c356.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/12.6311bbb4.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/13.9f626855.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/14.2a433a45.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/15.f4a73f35.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/16.0da34392.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/17.4ae81fed.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/18.1198418d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/19.9efc8374.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/20.5d622c1c.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/21.8daff977.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/22.125fbbec.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/23.51842491.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/24.d29f9239.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/25.50b537e5.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/26.a7803a32.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/27.3a646cab.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/28.0f04383d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/29.516bbd6e.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/3.a5bdcc19.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/30.0c3e2a58.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/31.c55b1b7b.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/32.6f42b27f.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/33.5630dc9b.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/34.506ccca3.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/35.525f91fc.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/36.3ed31312.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/37.e0c7ab78.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/38.94c28a78.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/39.0f6ab893.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/4.17635ff9.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/40.31380cbc.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/41.7862120c.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/42.e1b28fea.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/43.bba45c93.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/44.f543bcf0.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/45.b3468082.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/46.ce165ee3.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/47.cd346d62.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/48.f34fd7c9.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/5.bb8f33b7.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/50.944cf170.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/51.875167a9.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/52.37cbc86f.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/53.afa7aef4.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/54.f01744cd.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/55.bf004fec.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/56.86541d80.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/57.851b13ff.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/58.9979010b.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/59.80a18be0.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/6.46359932.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/60.3913a449.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/61.95d9a272.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/62.5e28c5de.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/63.23644217.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/64.e291cd20.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/7.720220fb.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/vendors~docsearch.94b65286.js">
+    <link rel="stylesheet" href="/PurpleFish_Blog/assets/css/0.styles.2b0a0130.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/PurpleFish_Blog/" class="home-link router-link-active"><!----> <span class="site-name">PurpleFish’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/PurpleFish_Blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/notes/" class="nav-link router-link-active">
+  笔记
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/articles/" class="nav-link">
+  文章
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/projects/" class="nav-link">
+  项目集
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/PurpleFish_Blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/notes/" class="nav-link router-link-active">
+  笔记
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/articles/" class="nav-link">
+  文章
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/projects/" class="nav-link">
+  项目集
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Webpack的loader与plugin以及原理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/PurpleFish_Blog/notes/05.6Webpack%E7%9A%84Loder%E4%B8%8Eplugin%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86.html#loader-实际应用场景" class="sidebar-link">Loader 实际应用场景</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/PurpleFish_Blog/notes/05.6Webpack%E7%9A%84Loder%E4%B8%8Eplugin%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86.html#plugin-实际应用场景" class="sidebar-link">Plugin 实际应用场景</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.6Webpack%E7%9A%84Loder%E4%B8%8Eplugin%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/PurpleFish_Blog/notes/05.6Webpack%E7%9A%84Loder%E4%B8%8Eplugin%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86.html#sass-和-less-的编译原理及-loader-的作用" class="sidebar-link">Sass 和 Less 的编译原理及 Loader 的作用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.6Webpack%E7%9A%84Loder%E4%B8%8Eplugin%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86.html#sass-编译原理及-sass-loader-的作用" class="sidebar-link">Sass 编译原理及 sass-loader 的作用</a></li><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.6Webpack%E7%9A%84Loder%E4%B8%8Eplugin%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86.html#less-编译原理及-less-loader-的作用" class="sidebar-link">Less 编译原理及 less-loader 的作用</a></li><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.6Webpack%E7%9A%84Loder%E4%B8%8Eplugin%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86.html#示例-完整的-webpack-配置" class="sidebar-link">示例：完整的 Webpack 配置</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="webpack的loader与plugin以及原理"><a href="#webpack的loader与plugin以及原理" class="header-anchor">#</a> Webpack的loader与plugin以及原理</h1> <table><thead><tr><th>方面</th> <th>Loader</th> <th>Plugin</th></tr></thead> <tbody><tr><td><strong>功能</strong></td> <td>用于对源代码文件进行转换和处理，将各种类型的文件转换为 Webpack 可处理的模块。</td> <td>用于对 Webpack 的编译过程进行扩展和增强，执行更广泛的任务，如打包优化、资源管理、环境变量注入等。</td></tr> <tr><td><strong>运行时</strong></td> <td>运行在 Webpack 扲 织文件之前，主要在模块处理阶段对文件进行转换和加载。</td> <td>贯穿整个 Webpack 编译生命周期，在不同阶段通过事件钩子执行任务，如编译开始前、模块生成后、资源输出前等。</td></tr> <tr><td><strong>文件上下文</strong></td> <td>通过 <code>this.context</code> 获取 Loader 所在目录，用于解析模块路径等。</td> <td>通过 <code>compiler</code> 和 <code>compilation</code> 对象获取项目上下文信息，如项目根目录、输出目录、配置信息等。</td></tr> <tr><td><strong>路径处理</strong></td> <td>处理文件中对其他文件的引用路径，如 <code>url()</code> 引入的资源路径转换，将资源路径转换为相对于输出目录的正确路径或内联为 Base64 编码等。</td> <td>可对整个项目的文件路径进行复杂处理，如调整资源路径结构、生成带有哈希值的文件名以实现缓存 busting 等。</td></tr> <tr><td><strong>文件处理</strong></td> <td>针对每个文件进行处理，作用范围相对较小，直接对文件进行转换和加载。</td> <td>作用于整个项目，可全面修改和优化 Webpack 的构建结果和过程，如优化打包代码、生成额外文件等。</td></tr> <tr><td><strong>使用方式</strong></td> <td>在 Webpack 配置文件的 <code>module.rules</code> 属性中进行配置，通过 <code>test</code> 匹配文件类型，<code>use</code> 指定 Loader。</td> <td>需先通过 <code>require</code> 引入，然后在 Webpack 配置文件的 <code>plugins</code> 数组中实例化并添加相应的 Plugin。</td></tr> <tr><td><strong>作用范围</strong></td> <td>针对每个文件进行处理，作用范围相对较小。</td> <td>作用于整个项目，可以对 Webpack 的构建结果和过程进行全面的修改和优化，作用范围较大。</td></tr> <tr><td><strong>作用对象</strong></td> <td>直接作用于文件，对文件进行转换和加载。</td> <td>作用于 Webpack 的编译过程和输出结果，如优化打包后的代码、生成额外的文件等。</td></tr> <tr><td><strong>依赖性</strong></td> <td>是 Webpack 处理非 JavaScript 文件的关键，没有 Loader，Webpack 无法识别和处理这些文件。</td> <td>依赖于 Webpack 的编译过程，通过扩展 Webpack 的功能来实现更复杂的任务。</td></tr></tbody></table> <h2 id="loader-实际应用场景"><a href="#loader-实际应用场景" class="header-anchor">#</a> Loader 实际应用场景</h2> <ol><li><strong>处理 CSS 文件</strong></li></ol> <ul><li>配置示例：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>作用：当 Webpack 遇到 <code>.css</code> 文件时，先使用 <code>css-loader</code> 将 CSS 文件转换为 JavaScript 模块，然后使用 <code>style-loader</code> 将转换后的 CSS 代码插入到 HTML 页面的 <code>&lt;head&gt;</code> 标签中。</li></ul> <ol start="2"><li><strong>处理 LESS 文件</strong></li></ol> <ul><li>配置示例：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.less$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span> <span class="token string">'less-loader'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>作用：对于 <code>.less</code> 文件，首先使用 <code>less-loader</code> 将 LESS 代码编译为 CSS 代码，然后依次经过 <code>css-loader</code> 和 <code>style-loader</code> 的处理，最终将 CSS 样式应用到页面上。</li></ul> <ol start="3"><li><strong>处理图片文件</strong></li></ol> <ul><li>配置示例：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(png|jpg|gif)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'file-loader'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">outputPath</span><span class="token operator">:</span> <span class="token string">'images/'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>作用：当 Webpack 遇到图片文件时，使用 <code>file-loader</code> 将图片文件复制到输出目录的 <code>images</code> 文件夹中，并在代码中返回图片文件的路径。</li></ul> <ol start="4"><li><strong>处理字体文件</strong></li></ol> <ul><li>配置示例：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(woff|woff2|eot|ttf|otf)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+      <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'file-loader'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>作用：使用 <code>file-loader</code> 将字体文件复制到输出目录，并在代码中返回字体文件的路径。</li></ul> <h2 id="plugin-实际应用场景"><a href="#plugin-实际应用场景" class="header-anchor">#</a> Plugin 实际应用场景</h2> <ol><li><strong>生成 HTML 文件</strong></li></ol> <ul><li>配置示例：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token string">'./src/index.html'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'index.html'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>作用：<code>HtmlWebpackPlugin</code> 会根据提供的模板文件 <code>./src/index.html</code> 生成一个新的 HTML 文件 <code>index.html</code>，并将打包后的 JavaScript、CSS 和其他资源文件自动引入到生成的 HTML 文件中。</li></ul> <ol start="2"><li><strong>提取 CSS 文件</strong></li></ol> <ul><li>配置示例：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> MiniCssExtractPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mini-css-extract-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">MiniCssExtractPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'css/[name].css'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span>MiniCssExtractPlugin<span class="token punctuation">.</span>loader<span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>作用：<code>MiniCssExtractPlugin</code> 会将 CSS 代码从 JavaScript 文件中提取出来，生成单独的 CSS 文件，而不是将 CSS 插入到 HTML 页面中。</li></ul> <ol start="3"><li><strong>定义全局变量</strong></li></ol> <ul><li>配置示例：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token string-property property">'process.env.NODE_ENV'</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token string">'production'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>作用：<code>DefinePlugin</code> 可以在代码中定义全局变量，这里将 <code>process.env.NODE_ENV</code> 定义为 <code>'production'</code>，可以在代码中根据这个变量的值进行不同的逻辑处理。</li></ul> <ol start="4"><li><strong>优化代码分割</strong></li></ol> <ul><li>配置示例：</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> optimization <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">optimization</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">splitChunks</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">chunks</span><span class="token operator">:</span> <span class="token string">'all'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>作用：<code>splitChunks</code> 是 Webpack 提供的一个优化选项，用于自动将代码分割成多个 chunk，以提高代码复用性和加载性能。</li></ul> <h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <ul><li><strong>Loader</strong> 主要用于文件的转换和加载，针对特定类型的文件进行处理，将它们转换为 Webpack 能够识别的模块。</li> <li><strong>Plugin</strong> 则用于对 Webpack 的编译过程进行扩展和增强，可以完成更复杂的任务，如文件生成、代码优化、环境变量注入等。</li></ul> <h2 id="sass-和-less-的编译原理及-loader-的作用"><a href="#sass-和-less-的编译原理及-loader-的作用" class="header-anchor">#</a> Sass 和 Less 的编译原理及 Loader 的作用</h2> <h3 id="sass-编译原理及-sass-loader-的作用"><a href="#sass-编译原理及-sass-loader-的作用" class="header-anchor">#</a> Sass 编译原理及 <code>sass-loader</code> 的作用</h3> <ol><li><p><strong>Sass 文件的结构和特点</strong>：</p> <ul><li>Sass 是一种 CSS 预处理器语言，它扩展了 CSS 的功能，允许使用变量、嵌套规则、混合（<code>@mixin</code>）和继承（<code>@extend</code>）等功能。</li></ul></li></ol> <ul><li><p>例如，在 Sass 文件中可以这样定义变量和嵌套规则：</p> <div class="language- extra-class"><pre><code>  $primary-color: #3498db;
+ .header {
+   background-color: $primary-color;
+   padding: 20px;
+   .logo {
+     width: 100px;
+     height: 50px;
+   }
+ }
+</code></pre></div></li> <li><p>在这个例子中，<code>$primary-color</code> 是一个变量，<code>.header</code> 类中嵌套了 <code>.logo</code> 类。</p> <ol start="2"><li><strong><code>sass-loader</code> 的编译过程</strong>：
+<ul><li><p><strong>加载文件</strong>：当 Webpack 遇到 <code>.scss</code> 或 <code>.sass</code> 文件时，会使用 <code>sass-loader</code> 对文件进行处理。</p></li> <li><p><strong>解析 Sass 语法</strong>：<code>sass-loader</code> 会调用 Sass 编译器（如 Node Sass 或 Dart Sass）来解析 Sass 文件中的变量、嵌套规则、混合和继承等语法。</p></li> <li><p><strong>转换为 CSS</strong>：Sass 编译器将解析后的 Sass 代码转换为标准的 CSS 代码。对于上面的例子，转换后的 CSS 如下：</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.header</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #3498db<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.header .logo</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p><strong>传递给下一个 Loader</strong>：转换后的 CSS 代码会被传递给下一个 Loader（如 <code>css-loader</code>）进行进一步的处理。</p></li></ul></li></ol></li></ul> <h3 id="less-编译原理及-less-loader-的作用"><a href="#less-编译原理及-less-loader-的作用" class="header-anchor">#</a> Less 编译原理及 <code>less-loader</code> 的作用</h3> <ol><li><p><strong>Less 文件的结构和特点</strong>：</p> <ul><li><p>Less 也是一种 CSS 预处理器语言，与 Sass 类似，它也支持变量、嵌套规则、混合（<code>@mixin</code>）和函数等功能。</p></li> <li><p>例如，在 Less 文件中可以这样定义变量和嵌套规则：</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token variable">@primary-color<span class="token punctuation">:</span></span> #3498db<span class="token punctuation">;</span>
+
+<span class="token selector">.header</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">@primary-color</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+  <span class="token selector">.logo</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>在这个例子中，<code>@primary-color</code> 是一个变量，<code>.header</code> 类中嵌套了 <code>.logo</code> 类。</p></li></ul></li> <li><p><strong><code>less-loader</code> 的编译过程</strong>：</p> <ul><li><p><strong>加载文件</strong>：当 Webpack 遇到 <code>.less</code> 文件时，会使用 <code>less-loader</code> 对文件进行处理。</p></li> <li><p><strong>解析 Less 语法</strong>：<code>less-loader</code> 会调用 Less 编译器来解析 Less 文件中的变量、嵌套规则、混合和函数等语法。</p></li> <li><p><strong>转换为 CSS</strong>：Less 编译器将解析后的 Less 代码转换为标准的 CSS 代码。对于上面的例子，转换后的 CSS 如下：</p></li> <li><p>Less 编译器的工作原理</p> <ul><li>词法分析：将 Less 代码分解为一个个的词法单元（token）。</li> <li>语法分析：根据 Less 的语法规则，将词法单元组合成抽象语法树（AST）。</li> <li>代码生成：遍历 AST，将其转换为对应的 CSS 代码。对于嵌套的选择器，会将其展开；对于变量，会替换为具体的值。</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.header</span> <span class="token punctuation">{</span>
+</code></pre></div></li></ul></li></ol> <div class="language- extra-class"><pre><code>background-color: #3498db;
+     padding: 20px;
+   }
+   .header .logo {
+     width: 100px;
+     height: 50px;
+   }
+   ```
+ 
+ * **传递给下一个 Loader**：转换后的 CSS 代码会被传递给下一个 Loader（如 `css-loader`）进行进一步的处理。
+</code></pre></div><h3 id="示例-完整的-webpack-配置"><a href="#示例-完整的-webpack-配置" class="header-anchor">#</a> 示例：完整的 Webpack 配置</h3> <p>以下是一个完整的 Webpack 配置示例，展示了如何使用 <code>sass-loader</code> 和 <code>less-loader</code> 来处理 Sass 和 Less 文件：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> MiniCssExtractPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mini-css-extract-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'bundle.js'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token comment">// 处理 Sass 文件</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.scss$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          MiniCssExtractPlugin<span class="token punctuation">.</span>loader<span class="token punctuation">,</span>
+          <span class="token string">'css-loader'</span><span class="token punctuation">,</span>
+          <span class="token string">'sass-loader'</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment">// 处理 Less 文件</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.less$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">use</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          MiniCssExtractPlugin<span class="token punctuation">.</span>loader<span class="token punctuation">,</span>
+          <span class="token string">'css-loader'</span><span class="token punctuation">,</span>
+          <span class="token string">'less-loader'</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">MiniCssExtractPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'css/[name].css'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>在这个配置中：</p> <ul><li><code>sass-loader</code> 和 <code>less-loader</code> 分别用于处理 <code>.scss</code> 和 <code>.less</code> 文件。</li> <li><code>css-loader</code> 用于解析 CSS 文件中的模块依赖。</li> <li><code>MiniCssExtractPlugin.loader</code> 用于将 CSS 提取到单独的文件中，而不是将 CSS 插入到 HTML 文件中。</li></ul> <p>通过这种配置，Webpack 可以将 Sass 和 Less 文件编译为标准的 CSS 文件，并将其提取到单独的 CSS 文件中，最终输出到指定的目录。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/PurpleFish_Blog/assets/js/app.ff8256e3.js" defer></script><script src="/PurpleFish_Blog/assets/js/2.43a24c62.js" defer></script><script src="/PurpleFish_Blog/assets/js/1.6ee28ae7.js" defer></script><script src="/PurpleFish_Blog/assets/js/49.04a56087.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS 预处理器与后处理器 | PurpleFish’s Blog</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="这是一个基于 VuePress 的博客">
+    
+    <link rel="preload" href="/PurpleFish_Blog/assets/css/0.styles.2b0a0130.css" as="style"><link rel="preload" href="/PurpleFish_Blog/assets/js/app.ff8256e3.js" as="script"><link rel="preload" href="/PurpleFish_Blog/assets/js/2.43a24c62.js" as="script"><link rel="preload" href="/PurpleFish_Blog/assets/js/1.6ee28ae7.js" as="script"><link rel="preload" href="/PurpleFish_Blog/assets/js/50.944cf170.js" as="script"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/10.b04fc0d4.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/11.5a32c356.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/12.6311bbb4.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/13.9f626855.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/14.2a433a45.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/15.f4a73f35.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/16.0da34392.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/17.4ae81fed.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/18.1198418d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/19.9efc8374.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/20.5d622c1c.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/21.8daff977.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/22.125fbbec.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/23.51842491.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/24.d29f9239.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/25.50b537e5.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/26.a7803a32.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/27.3a646cab.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/28.0f04383d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/29.516bbd6e.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/3.a5bdcc19.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/30.0c3e2a58.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/31.c55b1b7b.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/32.6f42b27f.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/33.5630dc9b.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/34.506ccca3.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/35.525f91fc.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/36.3ed31312.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/37.e0c7ab78.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/38.94c28a78.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/39.0f6ab893.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/4.17635ff9.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/40.31380cbc.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/41.7862120c.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/42.e1b28fea.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/43.bba45c93.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/44.f543bcf0.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/45.b3468082.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/46.ce165ee3.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/47.cd346d62.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/48.f34fd7c9.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/49.04a56087.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/5.bb8f33b7.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/51.875167a9.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/52.37cbc86f.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/53.afa7aef4.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/54.f01744cd.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/55.bf004fec.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/56.86541d80.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/57.851b13ff.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/58.9979010b.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/59.80a18be0.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/6.46359932.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/60.3913a449.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/61.95d9a272.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/62.5e28c5de.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/63.23644217.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/64.e291cd20.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/7.720220fb.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/vendors~docsearch.94b65286.js">
+    <link rel="stylesheet" href="/PurpleFish_Blog/assets/css/0.styles.2b0a0130.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/PurpleFish_Blog/" class="home-link router-link-active"><!----> <span class="site-name">PurpleFish’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/PurpleFish_Blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/notes/" class="nav-link router-link-active">
+  笔记
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/articles/" class="nav-link">
+  文章
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/projects/" class="nav-link">
+  项目集
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/PurpleFish_Blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/notes/" class="nav-link router-link-active">
+  笔记
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/articles/" class="nav-link">
+  文章
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/projects/" class="nav-link">
+  项目集
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>CSS 预处理器与后处理器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#css-预处理器" class="sidebar-link">CSS 预处理器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#概念与优点" class="sidebar-link">概念与优点</a></li><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#典型应用场景" class="sidebar-link">典型应用场景</a></li><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#代码示例-sass" class="sidebar-link">代码示例（Sass）</a></li><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#代码示例-less" class="sidebar-link">代码示例（Less）</a></li></ul></li><li><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#css-后处理器" class="sidebar-link">CSS 后处理器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#概念与优点-2" class="sidebar-link">概念与优点</a></li><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#典型应用场景-2" class="sidebar-link">典型应用场景</a></li><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#代码示例-postcss" class="sidebar-link">代码示例（PostCSS）</a></li></ul></li><li><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#mixins-的定义和使用" class="sidebar-link">Mixins 的定义和使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#概念" class="sidebar-link">概念</a></li><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#代码示例-sass-2" class="sidebar-link">代码示例（Sass）</a></li><li class="sidebar-sub-header"><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#代码示例-less-2" class="sidebar-link">代码示例（Less）</a></li></ul></li><li><a href="/PurpleFish_Blog/notes/05.7Css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E5%90%8E%E5%A4%84%E7%90%86%E5%99%A8.html#总结" class="sidebar-link">总结</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="css-预处理器与后处理器"><a href="#css-预处理器与后处理器" class="header-anchor">#</a> CSS 预处理器与后处理器</h1> <h2 id="css-预处理器"><a href="#css-预处理器" class="header-anchor">#</a> CSS 预处理器</h2> <h3 id="概念与优点"><a href="#概念与优点" class="header-anchor">#</a> 概念与优点</h3> <p>CSS 预处理器是扩展了 CSS 功能的语言，使样式表更易于维护和编写，主要优点包括：</p> <ul><li><strong>变量</strong>：定义全局或局部变量，便于统一管理样式属性。</li> <li><strong>混合（Mixins）</strong>：创建可重用的代码块，在不同地方调用，减少代码冗余。</li> <li><strong>嵌套规则</strong>：嵌套 CSS 选择器，使样式结构更清晰，符合逻辑。</li> <li><strong>条件判断和循环</strong>：支持条件语句和循环结构，增强样式动态性。</li></ul> <h3 id="典型应用场景"><a href="#典型应用场景" class="header-anchor">#</a> 典型应用场景</h3> <ul><li><strong>大型项目开发</strong>：分层拆分、批量管理 CSS 代码，便于团队协作和代码管理。</li> <li><strong>样式复用</strong>：通过变量、Mixins 和函数提高代码复用性。</li> <li><strong>动态样式</strong>：利用条件判断和循环生成动态样式。</li></ul> <h3 id="代码示例-sass"><a href="#代码示例-sass" class="header-anchor">#</a> 代码示例（Sass）</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 定义变量</span>
+<span class="token property"><span class="token variable">$primary-color</span></span><span class="token punctuation">:</span> #3498db<span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$secondary-color</span></span><span class="token punctuation">:</span> #2ecc71<span class="token punctuation">;</span>
+
+<span class="token comment">// 定义 Mixin</span>
+<span class="token keyword">@mixin</span> <span class="token function">button-style</span><span class="token punctuation">(</span><span class="token variable">$color</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$color</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px 20px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+
+  <span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">{</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0.9<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用 Mixin</span>
+<span class="token selector">.primary-button </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">button-style</span><span class="token punctuation">(</span><span class="token variable">$primary-color</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.secondary-button </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">button-style</span><span class="token punctuation">(</span><span class="token variable">$secondary-color</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 嵌套规则</span>
+<span class="token selector">.menu </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$primary-color</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px 0<span class="token punctuation">;</span>
+
+  <span class="token selector">.menu-item </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 5px 15px<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+
+    <span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">{</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">darken</span><span class="token punctuation">(</span><span class="token variable">$primary-color</span><span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="代码示例-less"><a href="#代码示例-less" class="header-anchor">#</a> 代码示例（Less）</h3> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// 定义变量</span>
+<span class="token variable">@primary-color<span class="token punctuation">:</span></span> #3498db<span class="token punctuation">;</span>
+<span class="token variable">@secondary-color<span class="token punctuation">:</span></span> #2ecc71<span class="token punctuation">;</span>
+
+<span class="token comment">// 定义 Mixin</span>
+<span class="token selector">.button-style(<span class="token variable">@color</span>)</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">@color</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px 20px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+
+  <span class="token selector">&amp;:hover</span> <span class="token punctuation">{</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0.9<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用 Mixin</span>
+<span class="token selector">.primary-button</span> <span class="token punctuation">{</span>
+  <span class="token mixin-usage function">.button-style</span><span class="token punctuation">(</span><span class="token variable">@primary-color</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.secondary-button</span> <span class="token punctuation">{</span>
+  <span class="token mixin-usage function">.button-style</span><span class="token punctuation">(</span><span class="token variable">@secondary-color</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 嵌套规则</span>
+<span class="token selector">.menu</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">@primary-color</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px 0<span class="token punctuation">;</span>
+
+  <span class="token selector">.menu-item</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 5px 15px<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline<span class="token operator">-</span>block<span class="token punctuation">;</span>
+
+    <span class="token selector">&amp;:hover</span> <span class="token punctuation">{</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">darken</span><span class="token punctuation">(</span><span class="token variable">@primary-color</span><span class="token punctuation">,</span> 10%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="css-后处理器"><a href="#css-后处理器" class="header-anchor">#</a> CSS 后处理器</h2> <h3 id="概念与优点-2"><a href="#概念与优点-2" class="header-anchor">#</a> 概念与优点</h3> <p>CSS 后处理器在 CSS 编译后对代码进行优化和处理，主要优点包括：</p> <ul><li><strong>自动添加浏览器前缀</strong>：如 Autoprefixer，确保样式在不同浏览器中的一致性。</li> <li><strong>代码压缩</strong>：减少 CSS 文件大小，提高加载速度。</li> <li><strong>增强功能</strong>：支持现代 CSS 特性，如 CSS Grid 和 CSS Variables 的兼容性处理。</li></ul> <h3 id="典型应用场景-2"><a href="#典型应用场景-2" class="header-anchor">#</a> 典型应用场景</h3> <ul><li><strong>优化 CSS 输出</strong>：压缩代码、合并文件，减少 HTTP 请求。</li> <li><strong>兼容性处理</strong>：自动添加浏览器前缀，减少兼容性问题。</li> <li><strong>现代特性支持</strong>：为旧浏览器提供现代 CSS 特性支持。</li></ul> <h3 id="代码示例-postcss"><a href="#代码示例-postcss" class="header-anchor">#</a> 代码示例（PostCSS）</h3> <ol><li><p><strong>安装依赖</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> postcss autoprefixer postcss-cli --save-dev
+</code></pre></div></li> <li><p><strong>创建 PostCSS 配置文件</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">autoprefixer</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">overrideBrowserslist</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'last 2 versions'</span><span class="token punctuation">,</span> <span class="token string">'&gt; 1%'</span><span class="token punctuation">,</span> <span class="token string">'Firefox ESR'</span><span class="token punctuation">,</span> <span class="token string">'IE 9'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p><strong>编写 CSS 文件</strong></p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.button</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px 20px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #3498db<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p><strong>运行 PostCSS</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code>npx postcss input.css <span class="token parameter variable">-o</span> output.css
+</code></pre></div></li></ol> <h2 id="mixins-的定义和使用"><a href="#mixins-的定义和使用" class="header-anchor">#</a> Mixins 的定义和使用</h2> <h3 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h3> <p>Mixins 是预处理器中定义可重用样式代码块的方法。</p> <h3 id="代码示例-sass-2"><a href="#代码示例-sass-2" class="header-anchor">#</a> 代码示例（Sass）</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// 定义 Mixin</span>
+<span class="token keyword">@mixin</span> <span class="token function">flex-container</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$direction</span></span><span class="token punctuation">:</span> row<span class="token punctuation">,</span> <span class="token property"><span class="token variable">$justify</span></span><span class="token punctuation">:</span> flex-start<span class="token punctuation">,</span> <span class="token property"><span class="token variable">$align</span></span><span class="token punctuation">:</span> center<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> <span class="token variable">$direction</span><span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> <span class="token variable">$justify</span><span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> <span class="token variable">$align</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用 Mixin</span>
+<span class="token selector">.container </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> flex-container<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.navbar </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">flex-container</span><span class="token punctuation">(</span>row<span class="token punctuation">,</span> space-between<span class="token punctuation">,</span> center<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.card </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">flex-container</span><span class="token punctuation">(</span>column<span class="token punctuation">,</span> center<span class="token punctuation">,</span> center<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="代码示例-less-2"><a href="#代码示例-less-2" class="header-anchor">#</a> 代码示例（Less）</h3> <div class="language-less extra-class"><pre class="language-less"><code><span class="token comment">// 定义 Mixin</span>
+<span class="token selector">.flex-container(<span class="token variable">@direction</span>: row; <span class="token variable">@justify</span>: flex-start; <span class="token variable">@align</span>: center)</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> <span class="token variable">@direction</span><span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> <span class="token variable">@justify</span><span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> <span class="token variable">@align</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用 Mixin</span>
+<span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token mixin-usage function">.flex-container</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.navbar</span> <span class="token punctuation">{</span>
+  <span class="token mixin-usage function">.flex-container</span><span class="token punctuation">(</span>row<span class="token punctuation">,</span> space<span class="token operator">-</span>between<span class="token punctuation">,</span> center<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.card</span> <span class="token punctuation">{</span>
+  <span class="token mixin-usage function">.flex-container</span><span class="token punctuation">(</span>column<span class="token punctuation">,</span> center<span class="token punctuation">,</span> center<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <ul><li><strong>预处理器</strong>：通过变量、Mixins 和嵌套规则，提高 CSS 的可维护性和复用性。</li> <li><strong>后处理器</strong>：通过自动添加浏览器前缀、优化和压缩 CSS，提高 CSS 的兼容性和性能。</li> <li><strong>Mixins</strong>：定义可重用的样式代码块，减少代码冗余，提高开发效率。</li></ul> <p>这些工具和方法特别适合大型项目的开发和维护，可以显著提高开发效率和代码质量。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/PurpleFish_Blog/assets/js/app.ff8256e3.js" defer></script><script src="/PurpleFish_Blog/assets/js/2.43a24c62.js" defer></script><script src="/PurpleFish_Blog/assets/js/1.6ee28ae7.js" defer></script><script src="/PurpleFish_Blog/assets/js/50.944cf170.js" defer></script>
+  </body>
+</html>
