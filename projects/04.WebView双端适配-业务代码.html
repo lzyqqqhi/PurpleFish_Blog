@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WebView业务代码 | PurpleFish’s Blog</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="这是一个基于 VuePress 的博客">
+    
+    <link rel="preload" href="/PurpleFish_Blog/assets/css/0.styles.2b0a0130.css" as="style"><link rel="preload" href="/PurpleFish_Blog/assets/js/app.c4a37a76.js" as="script"><link rel="preload" href="/PurpleFish_Blog/assets/js/2.43a24c62.js" as="script"><link rel="preload" href="/PurpleFish_Blog/assets/js/1.6ee28ae7.js" as="script"><link rel="preload" href="/PurpleFish_Blog/assets/js/72.0bd989e3.js" as="script"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/10.b04fc0d4.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/11.5a32c356.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/12.6311bbb4.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/13.9f626855.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/14.2a433a45.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/15.f4a73f35.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/16.0da34392.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/17.4ae81fed.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/18.1198418d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/19.9efc8374.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/20.5d622c1c.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/21.8daff977.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/22.a60eab7b.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/23.57a83c52.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/24.d29f9239.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/25.3027b42d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/26.2a4289a9.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/27.a081d4ca.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/28.3072f92d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/29.0bd75093.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/3.a5bdcc19.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/30.9e822ef2.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/31.de12e0fe.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/32.f5636acf.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/33.324d6a45.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/34.d2fcdf22.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/35.c7ad7e9d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/36.6df5c5d9.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/37.eded10d2.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/38.62f246bb.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/39.0333638d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/4.17635ff9.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/40.d789de03.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/41.1c55dd4f.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/42.876f1636.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/43.7386aeb7.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/44.5f3a47ea.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/45.797065d5.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/46.70e49ff3.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/47.3079f185.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/48.a17ab2af.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/49.a96dbfa7.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/5.bb8f33b7.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/50.18c0ac28.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/51.acbc1d33.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/52.efe82131.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/53.15ccce8d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/54.d150e496.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/55.a0d30aee.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/56.2437b9ac.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/57.f485558d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/58.cca2ad32.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/59.a7e62283.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/6.46359932.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/60.fe13b374.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/61.3f8d5cea.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/62.3bfab024.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/63.fc5c4832.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/64.46170280.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/65.00b484b6.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/66.3f87d0b6.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/67.8a3158ce.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/68.97dc609d.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/69.647c70fc.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/7.720220fb.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/70.46630c60.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/71.926ec442.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/73.0f3e030a.js"><link rel="prefetch" href="/PurpleFish_Blog/assets/js/vendors~docsearch.94b65286.js">
+    <link rel="stylesheet" href="/PurpleFish_Blog/assets/css/0.styles.2b0a0130.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/PurpleFish_Blog/" class="home-link router-link-active"><!----> <span class="site-name">PurpleFish’s Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/PurpleFish_Blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/notes/" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/articles/" class="nav-link">
+  文章
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/projects/" class="nav-link router-link-active">
+  项目集
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/PurpleFish_Blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/notes/" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/articles/" class="nav-link">
+  文章
+</a></div><div class="nav-item"><a href="/PurpleFish_Blog/projects/" class="nav-link router-link-active">
+  项目集
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>WebView业务代码</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/PurpleFish_Blog/projects/04.WebView%E5%8F%8C%E7%AB%AF%E9%80%82%E9%85%8D-%E4%B8%9A%E5%8A%A1%E4%BB%A3%E7%A0%81.html#判断是否为app环境" class="sidebar-link">判断是否为APP环境</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/PurpleFish_Blog/projects/04.WebView%E5%8F%8C%E7%AB%AF%E9%80%82%E9%85%8D-%E4%B8%9A%E5%8A%A1%E4%BB%A3%E7%A0%81.html#检查是否为登录状态" class="sidebar-link">检查是否为登录状态</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="webview业务代码"><a href="#webview业务代码" class="header-anchor">#</a> WebView业务代码</h1> <h2 id="判断是否为app环境"><a href="#判断是否为app环境" class="header-anchor">#</a> 判断是否为APP环境</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">class</span> <span class="token class-name">BridgeFit</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 缓存环境判断结果</span>
+    <span class="token keyword">private</span> isAppEnv<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token comment">// 缓存登录状态</span>
+    <span class="token keyword">private</span> loginStatusCache<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token punctuation">[</span>key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// APP环境标识（可根据实际情况修改）</span>
+    <span class="token keyword">private</span> appUserAgents <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'MyAppAndroid'</span><span class="token punctuation">,</span> <span class="token string">'MyAppiOS'</span><span class="token punctuation">,</span> <span class="token string">'CustomAppWebview'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 判断当前是否为APP WebView环境
+     * @returns boolean 是否为APP环境
+     */</span>
+    <span class="token function">isAppWebview</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>isAppEnv <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>isAppEnv<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> window <span class="token operator">===</span> <span class="token string">'undefined'</span> <span class="token operator">||</span> <span class="token operator">!</span>window<span class="token punctuation">.</span>navigator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>isAppEnv <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">const</span> userAgent <span class="token operator">=</span> window<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>isAppEnv <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>appUserAgents<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>agent <span class="token operator">=&gt;</span>
+            userAgent<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>agent<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>isAppEnv<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 判断当前是否为浏览器环境
+     * @returns boolean 是否为浏览器环境
+     */</span>
+    <span class="token function">isBrowser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isAppWebview</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token operator">...</span> <span class="token operator">...</span> 
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="检查是否为登录状态"><a href="#检查是否为登录状态" class="header-anchor">#</a> 检查是否为登录状态</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code>    <span class="token comment">/**
+     * APP环境下检查登录状态
+     * @param type 检查类型
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">async</span> <span class="token function">checkAppLoginStatus</span><span class="token punctuation">(</span>type<span class="token operator">:</span> <span class="token string">'local'</span> <span class="token operator">|</span> <span class="token string">'remote'</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> window <span class="token operator">===</span> <span class="token string">'undefined'</span> <span class="token operator">||</span> <span class="token operator">!</span>window<span class="token punctuation">.</span>jsBridge<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token builtin">Promise</span></span><span class="token punctuation">(</span>resolve <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'local'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// 本地检查（快速）</span>
+                window<span class="token punctuation">.</span>jsBridge<span class="token punctuation">.</span><span class="token function">callHandler</span><span class="token punctuation">(</span><span class="token string">'getLocalLoginStatus'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>status<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment">// 远程检查（更准确，会与服务器校验）</span>
+                window<span class="token punctuation">.</span>jsBridge<span class="token punctuation">.</span><span class="token function">callHandler</span><span class="token punctuation">(</span><span class="token string">'checkRemoteLogin'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>response<span class="token operator">:</span> <span class="token punctuation">{</span> isLoggedIn<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>isLoggedIn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 浏览器环境下检查登录状态
+     * @param type 检查类型
+     */</span>
+    <span class="token keyword">private</span> <span class="token function">checkBrowserLoginStatus</span><span class="token punctuation">(</span>type<span class="token operator">:</span> <span class="token string">'local'</span> <span class="token operator">|</span> <span class="token string">'remote'</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> window <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'local'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 检查本地存储的登录状态</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                <span class="token keyword">const</span> userInfo <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'userInfo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token operator">!</span><span class="token operator">!</span>userInfo<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Failed to check local login status:'</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 这里简化处理，实际项目中应该调用接口检查</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'Remote login check in browser should be implemented with API call'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 登录操作，根据环境选择合适的登录方式
+     * @returns Promise&lt;boolean&gt; 登录是否成功
+     */</span>
+    <span class="token keyword">async</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isAppWebview</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">appLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">browserLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * APP环境下的登录实现
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">async</span> <span class="token function">appLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> window <span class="token operator">===</span> <span class="token string">'undefined'</span> <span class="token operator">||</span> <span class="token operator">!</span>window<span class="token punctuation">.</span>jsBridge<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token builtin">Promise</span></span><span class="token punctuation">(</span>resolve <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            window<span class="token punctuation">.</span>jsBridge<span class="token punctuation">.</span><span class="token function">callHandler</span><span class="token punctuation">(</span><span class="token string">'openLoginPage'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>response<span class="token operator">:</span> <span class="token punctuation">{</span> success<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">refreshLoginStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 浏览器环境下的登录实现
+     */</span>
+    <span class="token keyword">private</span> <span class="token function">browserLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token builtin">Promise</span></span><span class="token punctuation">(</span>resolve <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 浏览器环境下跳转到登录页面</span>
+            <span class="token keyword">const</span> currentUrl <span class="token operator">=</span> <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/login?redirect=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentUrl<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+            <span class="token comment">// 由于页面会跳转，这里无法直接返回成功状态，实际应在登录后通过回调处理</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/PurpleFish_Blog/assets/js/app.c4a37a76.js" defer></script><script src="/PurpleFish_Blog/assets/js/2.43a24c62.js" defer></script><script src="/PurpleFish_Blog/assets/js/1.6ee28ae7.js" defer></script><script src="/PurpleFish_Blog/assets/js/72.0bd989e3.js" defer></script>
+  </body>
+</html>
